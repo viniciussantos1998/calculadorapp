@@ -1,4 +1,4 @@
-import { StyleSheet, Text, Dimensions, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Dimensions, TouchableOpacity } from 'react-native';
 
 export default ({ onPress, text, size, theme}) => {
     const buttonStyles = [styles.button];
@@ -19,8 +19,9 @@ export default ({ onPress, text, size, theme}) => {
         <TouchableOpacity onPress={onPress} style={buttonStyles}>
             <Text style={textStyles}>{text}</Text>
         </TouchableOpacity>
-    );
-};
+    )
+
+}
 
 //definindo as dimensões
 const screen = Dimensions.get("window");
@@ -28,7 +29,7 @@ const buttonWidth = screen.width / 4;
 
 const styles = StyleSheet.create({
     button:{
-        backgroundColor: "#333333",
+        backgroundColor: "#00FFFF",
         flex: 1,
         height: Math.floor(buttonWidth - 10),
         alignItems: "center",
@@ -36,15 +37,15 @@ const styles = StyleSheet.create({
         borderRadius:Math.floor(buttonWidth),
         margin:5,
     },
-    text:{
-        color: "#fff",
-        fontSize: 24,
+    text :{
+        color:'#000000', 
+        fontSize:24,
     },
-    textSecondary:{
-        color: "#060606",
+    textSecondary :{
+        color:'#000000',
     },
     buttonDouble:{
-        width: screen.width / 2 - 10,
+        width: screen.width / 2-10,
         flex: 0,
         alignItems: "flex-start",
         paddingLeft: 40,
@@ -53,6 +54,6 @@ const styles = StyleSheet.create({
         backgroundColor: "#a6a6a6",
     },
     buttonAccent:{
-        backgroundColor: "#ffc107"
-    },
+        backgroundColor: "#ADD8E6",
+    }
 });
